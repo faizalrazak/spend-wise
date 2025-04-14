@@ -5,3 +5,11 @@
 [x-cloak] {
     display: none;
 }
+
+.bg-primary {
+    background-color: #82C787;
+}
+
+.btn-primary {
+    background-color: #318161;
+}

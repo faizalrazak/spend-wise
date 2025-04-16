@@ -27,7 +27,7 @@
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
-                        <x-dropdown align="right" width="60">
+                        {{-- <x-dropdown align="right" width="60">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
@@ -72,7 +72,7 @@
                                     @endif
                                 </div>
                             </x-slot>
-                        </x-dropdown>
+                        </x-dropdown> --}}
                     </div>
                 @endif
 
@@ -107,11 +107,11 @@
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                            {{-- @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
-                            @endif
+                            @endif --}}
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
@@ -194,7 +194,7 @@
                         {{ __('Manage Team') }}
                     </div>
 
-                    <!-- Team Settings -->
+                    {{-- <!-- Team Settings -->
                     <x-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
                         {{ __('Team Settings') }}
                     </x-responsive-nav-link>
@@ -203,7 +203,7 @@
                         <x-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
                             {{ __('Create New Team') }}
                         </x-responsive-nav-link>
-                    @endcan
+                    @endcan --}}
 
                     <!-- Team Switcher -->
                     @if (Auth::user()->allTeams()->count() > 1)
